@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritwik Sharma</title>
+  <meta name="description" content="Ritwik Sharma. Game and interactive developer. Builds games, agents, and live systems.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    .portal-wrap { flex: 1; display: flex; align-items: center; padding: var(--s-9) 0; }
+    .portal-inner { max-width: 900px; margin: 0 auto; padding: 0 var(--gutter); width: 100%; }
+
+    .portal-hero { margin-bottom: var(--s-8); }
+    .portal-hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: var(--s-3);
+    }
+    .portal-hero h1 .accent {
+      color: var(--accent);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .portal-hero p {
+      font-size: clamp(15px, 1.8vw, 17px);
+      color: var(--text-soft);
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+    .portal-hero .eyebrow {
+      margin-bottom: var(--s-4);
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s-4);
+    }
+    @media (max-width: 640px) {
+      .portal-grid { grid-template-columns: 1fr; }
+    }
+
+    .portal-card {
+      display: block;
+      padding: var(--s-5);
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: border-color 0.18s ease, transform 0.18s ease, background 0.18s ease;
+      position: relative;
+    }
+    .portal-card:hover {
+      border-color: var(--accent);
+      background: var(--bg-elev-2);
+      transform: translateY(-2px);
+    }
+    .portal-card .card-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: var(--s-3);
+      display: flex;
+      align-items: center;
+      gap: var(--s-2);
+    }
+    .portal-card .card-tag .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .portal-card .card-tag .external::after {
+      content: ' ↗';
+      color: var(--text-faint);
+    }
+    .portal-card .card-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: var(--s-2);
+    }
+    .portal-card .card-desc {
+      font-size: 13px;
+      color: var(--text-soft);
+      line-height: 1.55;
+    }
+    .portal-card .card-url {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-faint);
+      margin-top: var(--s-3);
+    }
+
+    .portal-foot {
+      margin-top: var(--s-8);
+      padding-top: var(--s-5);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--s-4);
+    }
+    .portal-foot-links {
+      display: flex;
+      gap: var(--s-5);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+    .portal-foot-links a {
+      transition: color 0.15s ease;
+    }
+    .portal-foot-links a:hover { color: var(--accent); }
+    .portal-foot-meta {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+  </style>
+</head>
+<body>
+
+<main class="portal-wrap">
+  <div class="portal-inner">
+
+    <div class="portal-hero">
+      <div class="eyebrow">Ritwik Sharma <span class="accent">·</span> Game &amp; Interactive Developer</div>
+      <h1>Builds games, agents,<br><span class="accent">and live systems.</span></h1>
+      <p>Eight years of production work across game systems, multi-agent AI, real-time multiplayer infrastructure, and physical interactive installations. This is the index of everywhere I work and what I work on.</p>
+    </div>
+
+    <div class="portal-grid">
+
+      <a class="portal-card" href="https://work.ritwiksharma.com">
+        <div class="card-tag"><span class="dot"></span>Portfolio</div>
+        <div class="card-title">Work Portfolio</div>
+        <div class="card-desc">Case studies of games, AI systems, installations, and brand activations. The most current view of what I build.</div>
+        <div class="card-url">work.ritwiksharma.com</div>
+      </a>
+
+      <a class="portal-card" href="https://phd.ritwiksharma.com">
+        <div class="card-tag"><span class="dot"></span>Research</div>
+        <div class="card-title">PhD Portfolio</div>
+        <div class="card-desc">Research portfolio focused on multi-agent narrative systems and information reliability. Proposals, position papers, and academic work.</div>
+        <div class="card-url">phd.ritwiksharma.com</div>
+      </a>
+
+      <a class="portal-card" href="https://interactxp.in" target="_blank" rel="noopener">
+        <div class="card-tag"><span class="external">Company</span></div>
+        <div class="card-title">InteractXP</div>
+        <div class="card-desc">Studio for interactive installations and brand activations. Director and Lead Developer.</div>
+        <div class="card-url">interactxp.in</div>
+      </a>
+
+      <a class="portal-card" href="https://stateofundeadpurge.site" target="_blank" rel="noopener">
+        <div class="card-tag"><span class="external">Live Platform</span></div>
+        <div class="card-title">Soup</div>
+        <div class="card-desc">A persistent Project Zomboid community ecosystem running across game, Discord, and web. Several thousand active members.</div>
+        <div class="card-url">stateofundeadpurge.site</div>
+      </a>
+
+      <a class="portal-card" href="https://imitatia.com" target="_blank" rel="noopener">
+        <div class="card-tag"><span class="external">Project</span></div>
+        <div class="card-title">Imitatia</div>
+        <div class="card-desc">An experiment in narrative agent simulation. Sandbox for ongoing PhD-adjacent work.</div>
+        <div class="card-url">imitatia.com</div>
+      </a>
+
+      <a class="portal-card" href="https://www.linkedin.com/in/ritwik-sharma-bb1370152/" target="_blank" rel="noopener">
+        <div class="card-tag"><span class="external">Profile</span></div>
+        <div class="card-title">LinkedIn</div>
+        <div class="card-desc">Work history, recommendations, and the formal professional record. Open to inbound for game studio and interactive roles.</div>
+        <div class="card-url">linkedin.com/in/ritwik-sharma</div>
+      </a>
+
+      <a class="portal-card" href="https://github.com/Ritwiksharma097" target="_blank" rel="noopener">
+        <div class="card-tag"><span class="external">Code</span></div>
+        <div class="card-title">GitHub</div>
+        <div class="card-desc">Public repositories. Most production code (Soup, Zombita, Relay) is private; happy to share access on request.</div>
+        <div class="card-url">github.com/Ritwiksharma097</div>
+      </a>
+
+      <a class="portal-card" href="mailto:ritwiksharma097@gmail.com">
+        <div class="card-tag"><span class="dot"></span>Contact</div>
+        <div class="card-title">Email</div>
+        <div class="card-desc">Fastest way to reach me. I respond quickly. Open to remote work, contracting, and relocation (Canadian PR in progress).</div>
+        <div class="card-url">ritwiksharma097@gmail.com</div>
+      </a>
+
+    </div>
+
+    <div class="portal-foot">
+      <div class="portal-foot-links">
+        <a href="https://work.ritwiksharma.com">Work</a>
+        <a href="https://phd.ritwiksharma.com">Research</a>
+        <a href="mailto:ritwiksharma097@gmail.com">Contact</a>
+      </div>
+      <div class="portal-foot-meta">© 2026 Ritwik Sharma</div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
